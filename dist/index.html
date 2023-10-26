@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../vue/vue.global.js"></script>
+
+</head>
+
+<body>
+    <button id="check">確認</button>
+    <div id="app">
+        <input type="text" placeholder="username" v-model="username">
+        <input type="text" placeholder="text" v-model="message">
+        <button @click="addMessage">送出</button>
+        <ul v-for="i in chatroom">
+            <li>暱稱:{{i.username}}- 信息{{i.message}}- {{i.time}}</li>
+            <li>{{i}}</li>
+
+        </ul>
+    </div>
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
